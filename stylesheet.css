@@ -1,0 +1,145 @@
+:root {
+	--blue-light-9: #e6eef6;
+	--blue-light-8: #cdddee;
+	--blue-light-7: #b4cce5;
+	--blue-light-6: #9bbbdd;
+	--blue-light-5: #83aad4;
+	--blue-light-4: #6a99cb;
+	--blue-light-3: #5188c3;
+	--blue-light-2: #3877ba;
+	--blue-light-1: #1f66b2;
+	--blue: #0655a9;
+	--blue-dark-1: #054d98;
+	--blue-dark-2: #054487;
+	--blue-dark-3: #043b76;
+	--blue-dark-4: #043365;
+	--blue-dark-5: #032b55;
+	--blue-dark-6: #022244;
+	--blue-dark-7: #021933;
+	--blue-dark-8: #011122;
+	--blue-dark-9: #010811;
+	--red: #803030;
+	--ears: #d4baa3;
+	--tongue: #ee86b2;
+
+	--raleway: 'Raleway', sans-serif;
+	--raleway-semibold: 'Raleway Semibold', sans-serif;
+	--raleway-bold: 'Raleway Bold', sans-serif;
+
+	--font-size-extra-large: 5rem;
+	--font-size-large: 1.5rem;
+	--font-size-medium: 1.25rem;
+	--font-size-small: 1rem;
+}
+
+@font-face {
+	font-family: 'Raleway';
+	src: url('./assets/fonts/Raleway/static/Raleway-Regular.ttf');
+}
+
+@font-face {
+	font-family: 'Raleway Semibold';
+	src: url('./assets/fonts/Raleway/static/Raleway-SemiBold.ttf');
+}
+
+@font-face {
+	font-family: 'Raleway Bold';
+	src: url('./assets/fonts/Raleway/static/Raleway-Bold.ttf');
+}
+
+/* Todo: Also, the font sizes need tweaking, and then we need a breakpoint
+   todo: for when New London becomes two lines to adjust the gradient. */
+/* Todo: The iPhone 5 is 320px wide. Run with it. */
+@media (min-width: 40em) {
+	:root {
+		--font-size-extra-large: 7rem;
+		--font-size-large: 2rem;
+		--font-size-medium: 1.5rem;
+		--font-size-small: 1.25rem;
+	}
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+	height: 100vh;
+	width: 100vw;
+}
+
+body {
+	height: 100vh;
+	width: 100vw;
+	display: grid;
+	grid-auto-flow: row;
+	place-items: center;
+	background: var(--blue-dark-8);
+	color: var(--blue-light-9);
+	text-align: center;
+	padding: 2rem;
+	border: 24px solid var(--blue-dark-7);
+}
+
+h1 {
+	font-family: var(--raleway-bold);
+	font-size: var(--font-size-extra-large);
+	line-height: 1em;
+}
+
+#amp {
+	color: #fbe123;
+}
+
+#newLondon {
+	background: linear-gradient(
+		to bottom,
+		#7acbf5,
+		#7acbf5 25%,
+		#eaacb8 25%,
+		#eaacb8 42%,
+		#fff 42%,
+		#fff 57%,
+		#eaacb8 57%,
+		#eaacb8 70%,
+		#7acbf5 70%,
+		#7acbf5
+	);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-moz-background-clip: text;
+	-moz-text-fill-color: transparent;
+	-webkit-text-fill-color: transparent;
+	display: inline-block;
+}
+
+p {
+	font-family: var(--raleway);
+	font-size: var(--font-size-medium);
+}
+
+#website {
+	display: inline-block;
+	transform: rotate(-5deg);
+}
+
+#under {
+	display: inline-block;
+	transform: rotate(10deg);
+}
+
+#construction {
+	display: inline-block;
+	transform: rotate(-5deg);
+}
+
+a {
+	font-family: var(--raleway-semibold);
+	font-size: var(--font-size-large);
+	color: var(--blue-light-9);
+}
